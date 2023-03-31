@@ -1,0 +1,73 @@
+GET http://localhost:3000/todos/?status=TO%20DO
+
+###
+GET http://localhost:3000/todos/?priority=LOW
+
+###
+GET http://localhost:3000/todos/?priority=MEDIUM&status=IN%20PROGRESS
+
+###
+GET http://localhost:3000/todos/?search_q=HTML
+
+###
+GET http://localhost:3000/todos/7/
+
+###
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 11,
+  "todo": "Finalize",
+  "priority": "HIGH",
+  "status": "IN PROGRESS"
+}
+
+###
+PUT http://localhost:3000/todos/8/?status=DONE
+
+
+
+
+
+
+
+
+
+
+
+
+# Content-Type: application/json
+
+# {
+#   "id": 8,
+#   "todo": "REACT JS",
+#   "priority": "LOW",
+#   "status": "TO DO"
+# }
+###
+
+PUT http://localhost:3000/todos/7/?priority=HIGH
+# Content-Type: application/json
+
+# {
+#   "id": 7,
+#   "todo": "NODEJS",
+#   "priority": "MEDIUM",
+#   "status": "IN PROGRESS"
+# }
+
+###
+
+PUT http://localhost:3000/todos/6/?todo=Some%20task 
+# Content-Type: application/json
+
+# {
+#   "id": 6,
+#   "todo": "Some task",
+#   "priority": "MEDIUM",
+#   "status": "DONE"
+# }
+
+###
+DELETE http://localhost:3000/todos/4/
